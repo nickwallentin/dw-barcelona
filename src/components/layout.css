@@ -1,3 +1,45 @@
+@import url("https://use.typekit.net/ris4jne.css");
+
+:root {
+  /* Colors */
+  --c-green: #1e3c35;
+  --c-green-l: #32524b;
+  --c-copper: #dc9870;
+  --c-copper-dk: #824f32;
+  --c-copper-l: #e8a57e;
+  --c-beige: #efe4d5;
+  --c-beige-dk: #d0c0ab;
+  --c-title-dk: #1e3c35;
+  --c-title-l: #dc9870;
+  --c-txt-dk: #44403b;
+  --c-txt-l: #efe4d5;
+
+  /* Font sizes */
+  --f-title-big: 5vw;
+  --f-title-med: 4vw;
+  --f-p: 16px;
+
+  --lh-p: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --f-title-big: 50px;
+    --f-title-med: 30px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: big-caslon-fb, serif;
+  font-weight: 900;
+}
+div {
+  position: relative;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
