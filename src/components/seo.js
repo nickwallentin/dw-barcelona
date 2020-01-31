@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import SocialImage from "../images/dennis-westerberg-barcelona-social.jpg"
+
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -40,6 +42,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: SocialImage,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -47,6 +53,7 @@ function SEO({ description, lang, meta, title }) {
           property: `og:description`,
           content: metaDescription,
         },
+        { property: `og:image`, content: SocialImage },
         {
           property: `og:type`,
           content: `website`,
@@ -54,6 +61,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          name: `twitter:image`,
+          content: SocialImage,
         },
         {
           name: `twitter:creator`,
