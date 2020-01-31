@@ -31,10 +31,13 @@ export const Sec = styled.div`
     text-decoration: underline;
     font-style: italic;
   }
+  @media screen and (max-width: 800px) {
+    padding: ${props => props.mSpace || "5vh 0px"};
+  }
 `
 export const Wrap = styled.div`
   max-width: 1024px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 `
 
@@ -53,6 +56,8 @@ export const Grid = styled.div`
 
 export const Btn = styled.a`
   padding: 15px 30px;
+  z-index: 1;
+  position: relative;
   display: inline-block;
   background: rgb(220, 152, 112);
   background: -moz-linear-gradient(
@@ -76,4 +81,8 @@ export const Btn = styled.a`
   font-style: normal !important;
   border: 1px solid var(--c-copper-l);
   cursor: pointer;
+
+  @media screen and (max-width: 800px) {
+    margin-bottom: 30px;
+  }
 `

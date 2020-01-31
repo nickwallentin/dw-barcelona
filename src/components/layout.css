@@ -1,5 +1,18 @@
 @import url("https://use.typekit.net/ris4jne.css");
-
+body {
+  overflow: hidden;
+}
+div,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
 :root {
   /* Colors */
   --c-green: #1e3c35;
@@ -37,17 +50,25 @@ body {
   --c-txt-l: #efe4d5;
 
   /* Font sizes */
-  --f-title-big: 5vw;
-  --f-title-med: 4vw;
+  --f-title-big: 7vw;
+  --f-title-med: 6vw;
   --f-p: 16px;
 
   --lh-p: 24px;
 }
+@media screen and (max-width: 800px) {
+  .hide-mobile {
+    display: none;
+  }
+}
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 801px) {
   body {
     --f-title-big: 50px;
     --f-title-med: 30px;
+  }
+  .hide-desktop {
+    display: none;
   }
 }
 h1,

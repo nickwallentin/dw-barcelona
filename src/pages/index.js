@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -24,6 +24,7 @@ import BlurbTwo from "../assets/svg/blurb-2.svg"
 import BlurbThree from "../assets/svg/blurb-3.svg"
 
 const IndexPage = () => {
+  const [modalOpen, setModalOpen] = useState(false)
   const data = useStaticQuery(query)
   const images = data.allFile.edges
 
@@ -32,8 +33,13 @@ const IndexPage = () => {
   return (
     <React.Fragment>
       <SEO title="Home" />
-      <Sec space="0px 0px 5vh 0px" bg="var(--c-green)" darkBG>
-        <Header />
+      <Sec
+        space="0px 0px 5vh 0px"
+        mSpace="0px 0px 5vh 0px"
+        bg="var(--c-green)"
+        darkBG
+      >
+        <Header modalOpen={modalOpen} setModalOpen={setModalOpen} />
         <Wrap>
           <Grid cols="2fr 1fr" style={{ paddingTop: "5vh" }}>
             <div>
@@ -62,7 +68,7 @@ const IndexPage = () => {
           style={{ position: "absolute", bottom: "0px", right: "0px" }}
         />
       </Sec>
-      <Sec bg="var(--c-beige)">
+      <Sec mSpace="150px 0px 5vh 0px" bg="var(--c-beige)">
         <Wrap>
           <Grid cols="2fr 1fr">
             <div>
@@ -108,18 +114,25 @@ const IndexPage = () => {
           </div>
         </Wrap>
         <SymbolTwoTop
+          className="hide-mobile"
           style={{ position: "absolute", top: "0px", right: "10vw" }}
+        />
+        <SymbolTwoTop
+          className="hide-desktop"
+          style={{ position: "absolute", top: "-50px", right: "-35vw" }}
         />
       </Sec>
       <Sec bg="var(--c-beige)">
         <Grid cols="1fr 1fr">
           <Img
-            style={{ zIndex: "1" }}
+            style={{ zIndex: "1", marginBottom: "5vh" }}
             fluid={images[0].node.childImageSharp.fluid}
           />
           <div
             style={{
               maxWidth: "500px",
+              width: "90%",
+              margin: "0 auto",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -225,7 +238,11 @@ const IndexPage = () => {
                 Klicka här för att se pris samt all praktiskt infomation för
                 resan.
               </p>
-              <a style={{ zIndex: "1" }} href="#">
+              <a
+                onClick={() => setModalOpen(!modalOpen)}
+                style={{ zIndex: "1" }}
+                href="#"
+              >
                 Klicka här
               </a>
               <SymbolTwoInfoTop
@@ -252,7 +269,17 @@ const IndexPage = () => {
           </div>
         </Wrap>
         <SymbolTwoLeft
+          className="hide-mobile"
           style={{ position: "absolute", top: "-75%", left: "0" }}
+        />
+        <SymbolTwoLeft
+          className="hide-desktop"
+          style={{
+            position: "absolute",
+            top: "-49%",
+            left: "-50px",
+            transform: "scale(.8)",
+          }}
         />
       </Sec>
       <Sec bg="var(--c-beige)">
@@ -271,13 +298,19 @@ const IndexPage = () => {
                 Är ni fler som reser tillsammans, får ni göra en bokning vardera
                 per person.
               </em>
-              <a style={{ color: "var(--c-beige)", display: "block" }} href="#">
+              <a
+                onClick={() => setModalOpen(!modalOpen)}
+                style={{
+                  color: "var(--c-beige)",
+                  display: "block",
+                  marginBottom: "20px",
+                }}
+                href="#"
+              >
                 Praktiskt information & pris
               </a>
             </small>
-            <a style={{ display: "block" }} href="#">
-              Praktiskt information och pris.
-            </a>
+
             <Btn href={bookLink} rel="noopener noreferrer" target="_blank">
               Boka din plats idag
             </Btn>
@@ -288,6 +321,14 @@ const IndexPage = () => {
               style={{ position: "absolute", bottom: "0", right: "0" }}
             />
           </CTA>
+          <p
+            style={{ textAlign: "center", display: "block", marginTop: "50px" }}
+          >
+            <em>
+              {" "}
+              Denna resa är ett samarbete mellan Dennis Westerberg och Creandia.
+            </em>
+          </p>
         </Wrap>
         <SymbolTwoBot
           style={{
@@ -297,6 +338,89 @@ const IndexPage = () => {
           }}
         />
       </Sec>
+      {modalOpen && (
+        <InfoModal>
+          <div className="header">
+            <h1 style={{ marginBottom: "0px" }}>Barcelona</h1>
+            <span
+              style={{ cursor: "pointer" }}
+              onClick={() => setModalOpen(!modalOpen)}
+            >
+              Stäng
+            </span>
+          </div>
+          <Grid cols="1fr 1fr 1fr">
+            <div>
+              <h2>Praktiskt information</h2>
+              <ul>
+                <li>
+                  <strong>Plats:</strong> H10 Universitat, i centrala Barcelona
+                </li>
+                <li>
+                  <strong>Datum:</strong> 24 – 27 september, 2020
+                </li>
+                <li>
+                  <strong>Tider:</strong>
+                  <ul>
+                    <li>
+                      Ankomst 24/9 på eftermiddag/kväll. Vi välkomnar och tar en
+                      drink.
+                    </li>
+                    <li>Frukost varje dag: 9 – 10</li>
+                    <li>Utbildning den 25/9, 26/9, 27/9: 10 – 14</li>
+                    <li>Hemfärd: tidigast kl 15.00, 27/9</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Vad ingår:</h3>
+              <ul>
+                <li>Utbildning med Dennis Westerberg</li>
+                <li>Övernattning på hotell i tre nätter (del i dubbelrum)</li>
+                <li>Frukost varje morgon</li>
+                <li>Middag på kvällen den 25/9</li>
+                <li>Vinprovning, eftermiddag, den 26/9</li>
+                <li>Frukt, kaffe och te alla dagar </li>
+                <li>Transfer, till och från flygplatsen i Barcelona</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Vad tillkommer:</h3>
+              <ul>
+                <li>
+                  Var och en bokar och betalar sin egen flygresa, till och från
+                  Barcelona
+                </li>
+                <li>Enkelrumstillägg: 2000 kr</li>
+              </ul>
+            </div>
+          </Grid>
+
+          <p
+            style={{
+              color: "var(--c-copper)",
+              fontSize: "24px",
+              borderTop: "1px solid #ffffff20",
+              paddingTop: "20px",
+            }}
+          >
+            <span
+              style={{
+                color: "var(--c-beige)",
+                display: "block",
+                fontSize: "18px",
+              }}
+            >
+              Pris:
+            </span>
+            16.500 kr
+          </p>
+          <Btn href={bookLink} rel="noopener noreferrer" target="_blank">
+            Boka din plats
+          </Btn>
+        </InfoModal>
+      )}
     </React.Fragment>
   )
 }
@@ -345,6 +469,31 @@ const GetInfo = styled.div`
   }
   a {
     color: var(--c-beige);
+  }
+`
+
+const InfoModal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 8vw;
+  background: var(--c-green);
+  color: var(--c-beige);
+  h1,
+  h2,
+  h3 {
+    font-family: big-caslon-fb, serif !important;
+    color: var(--c-copper);
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vw;
   }
 `
 
