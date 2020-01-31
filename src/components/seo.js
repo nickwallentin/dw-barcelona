@@ -10,8 +10,6 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-import SocialImage from "../images/dennis-westerberg-barcelona-social.jpg"
-
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -21,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            defaultImage
           }
         }
       }
@@ -43,7 +42,9 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `image`,
-          content: SocialImage,
+          content:
+            "https://dw-barcelona.creandia.com" +
+            site.siteMetadata.defaultImage,
         },
         {
           property: `og:title`,
@@ -53,7 +54,12 @@ function SEO({ description, lang, meta, title }) {
           property: `og:description`,
           content: metaDescription,
         },
-        { property: `og:image`, content: SocialImage },
+        {
+          property: `og:image`,
+          content:
+            "https://dw-barcelona.creandia.com" +
+            site.siteMetadata.defaultImage,
+        },
         {
           property: `og:type`,
           content: `website`,
@@ -64,7 +70,9 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: SocialImage,
+          content:
+            "https://dw-barcelona.creandia.com" +
+            site.siteMetadata.defaultImage,
         },
         {
           name: `twitter:creator`,

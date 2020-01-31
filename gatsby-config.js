@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Res med Dennis Westerberg`,
     description: `Kombinera en fördjupning i de tre principerna med en avkopplande storstadssemester. Vi möts i underbara Barcelona, och spenderar mycket tid tillsammans. Ett unikt tillfälle att utforska välmåendet och att uppleva balans och sinnesnärvaro som håller i sig över tid.`,
+    defaultImage: "/images/dennis-westerberg-barcelona-social.jpg",
     author: `@nickwallentin`,
   },
   plugins: [
