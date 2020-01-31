@@ -42,6 +42,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${props => props.cols || "1fr"};
   grid-gap: ${props => props.gap || "2vw"};
+  z-index: 1;
 
   @media screen and (max-width: 800px) {
     & {

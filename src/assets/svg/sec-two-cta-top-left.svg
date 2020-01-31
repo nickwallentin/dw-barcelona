@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="192px" height="195px" viewBox="0 0 192 195" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-8.1%" y="-22.4%" width="116.2%" height="144.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.173268138 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Landing-Page" transform="translate(-392.000000, -2126.000000)" stroke="#305049" stroke-width="1.5">
+            <g id="Group-4" transform="translate(412.000000, 2144.000000)">
+                <g id="Group-3" filter="url(#filter-1)">
+                    <g transform="translate(-154.000000, -150.000000)">
+                        <path d="M150.500349,53.0663322 C182.547535,21.0191467 230.39682,16.8293753 257.283722,43.7162776 C284.170625,70.6031798 279.980853,118.452465 247.933668,150.499651 C279.980853,182.548527 284.170625,230.396121 257.283722,257.283531 C230.39682,284.170771 182.547535,279.981 150.500349,247.9328 C118.451473,279.981 70.6038786,284.170771 43.7164692,257.283531 C16.8292288,230.396121 21.0190001,182.548527 53.0672002,150.499651 C21.0190001,118.452465 16.8292288,70.6031798 43.7164692,43.7162776 C70.6038786,16.8293753 118.451473,21.0191467 150.500349,53.0663322 Z" id="Stroke-2"></path>
+                        <path d="M82.1113493,82.1118565 C82.1113493,36.793023 112.979923,0 151.000338,0 C189.020753,0 219.888143,36.793023 219.888143,82.1118565 C265.206977,82.1118565 302,112.979247 302,150.999662 C302,189.020077 265.206977,219.888651 219.888143,219.888651 C219.888143,265.207146 189.020753,302 151.000338,302 C112.979923,302 82.1113493,265.207146 82.1113493,219.888651 C36.7928539,219.888651 0,189.020077 0,150.999662 C0,112.979247 36.7928539,82.1118565 82.1113493,82.1118565 Z" id="Stroke-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

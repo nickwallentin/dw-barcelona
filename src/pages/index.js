@@ -13,6 +13,10 @@ import SymbolRight from "../assets/svg/sec-one-right.svg"
 import SymbolTwoTop from "../assets/svg/sec-two-top.svg"
 import SymbolTwoLeft from "../assets/svg/sec-two-left.svg"
 import SymbolTwoBot from "../assets/svg/sec-two-bot.svg"
+import SymbolTwoInfoTop from "../assets/svg/sec-two-info-top-right.svg"
+import SymbolTwoInfoBot from "../assets/svg/sec-two-info-bot-left.svg"
+import SymbolTwoCtaTop from "../assets/svg/sec-two-cta-top-left.svg"
+import SymbolTwoCtaBot from "../assets/svg/sec-two-cta-bot-right.svg"
 
 import BlurbOne from "../assets/svg/blurb-1.svg"
 import BlurbTwo from "../assets/svg/blurb-2.svg"
@@ -211,12 +215,20 @@ const IndexPage = () => {
               </p>
             </Blurb>
             <GetInfo>
-              <h4>Praktisk information</h4>
-              <p>
+              <h4 style={{ zIndex: "1" }}>Praktisk information</h4>
+              <p style={{ zIndex: "1" }}>
                 Klicka här för att se pris samt all praktiskt infomation för
                 resan.
               </p>
-              <a href="#">Klicka här</a>
+              <a style={{ zIndex: "1" }} href="#">
+                Klicka här
+              </a>
+              <SymbolTwoInfoTop
+                style={{ position: "absolute", top: "0", right: "0" }}
+              />
+              <SymbolTwoInfoBot
+                style={{ position: "absolute", bottom: "0", left: "0" }}
+              />
             </GetInfo>
           </Grid>
           <Line style={{ marginTop: "40px" }} />
@@ -241,20 +253,33 @@ const IndexPage = () => {
       <Sec bg="var(--c-beige)">
         <Wrap>
           <CTA>
-            <h2>Boka din plats idag</h2>
-            <p>
+            <h2 style={{ zIndex: "1" }}>Boka din plats idag</h2>
+            <p style={{ zIndex: "1", marginBottom: "10px" }}>
               Boka din plats genom att klicka på knappen nedan och fyll i
               formuläret. Efter din bokning skickar vi ett välkomstmail med
               ytterliggare information, samt en faktura.
             </p>
-            <small style={{ display: "block" }}>
-              Är ni fler som reser tillsammans, får ni göra en bokning vardera
-              per person.
+            <small style={{ display: "block", zIndex: "1" }}>
+              <em
+                style={{ zIndex: "1", marginBottom: "10px", display: "block" }}
+              >
+                Är ni fler som reser tillsammans, får ni göra en bokning vardera
+                per person.
+              </em>
+              <a style={{ color: "var(--c-beige)", display: "block" }} href="#">
+                Praktiskt information & pris
+              </a>
             </small>
             <a style={{ display: "block" }} href="#">
               Praktiskt information och pris.
             </a>
             <Btn>Boka din plats idag</Btn>
+            <SymbolTwoCtaTop
+              style={{ position: "absolute", top: "0", left: "0" }}
+            />
+            <SymbolTwoCtaBot
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            />
           </CTA>
         </Wrap>
         <SymbolTwoBot
@@ -290,6 +315,7 @@ const CTA = styled.div`
   padding: 40px;
   text-align: center;
   z-index: 1;
+  border-radius: 10px;
   h2 {
     color: var(--c-title-l);
   }
