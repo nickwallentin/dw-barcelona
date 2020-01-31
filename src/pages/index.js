@@ -47,11 +47,19 @@ const IndexPage = () => {
                 Följ med Dennis Westerberg <br /> på en resa till Barcelona.
               </h1>
               <p>
-                Du får möjlighet att kombinera en fördjupning i de tre
-                principerna med en avkopplande storstadssemester. Vi möts i
-                underbara Barcelona, och spenderar mycket tid tillsammans. Ett
-                unikt tillfälle att utforska välmåendet och att uppleva balans
-                och sinnesnärvaro som håller i sig över tid.
+                Du får möjlighet att kombinera en fördjupning i{" "}
+                <a
+                  style={{ color: "var(--c-copper)" }}
+                  href="https://denniswesterberg.com/de-tre-principerna/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  de tre principerna
+                </a>{" "}
+                med en avkopplande storstadssemester. Vi möts i underbara
+                Barcelona, och spenderar mycket tid tillsammans. Ett unikt
+                tillfälle att utforska välmåendet och att uppleva balans och
+                sinnesnärvaro som håller i sig över tid.
               </p>
               <Btn href={bookLink} rel="noopener noreferrer" target="_blank">
                 Boka din plats
@@ -142,8 +150,8 @@ const IndexPage = () => {
               Vi bor på fantastiska H10 Universitat som ligger supercentralt.
             </h2>
             <p>
-              Snyggt hotell med bra läge helt nära Plaza Catalunya. Härifrån har
-              du heller inte långt till Barrio Gotico, Barcelonas historiska
+              Snyggt hotell med bra läge nära Plaza Catalunya. Härifrån har du
+              heller inte långt till Barrio Gotico, Barcelonas historiska
               kvarter, och Paseo de Gracia. The H10 Universitat är inrymt i en
               byggnad från slutet av 1800-talet, som renoverats och byggts om
               till ett modernt hotell med alla bekvämligheter.
