@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, title }) {
             description
             author
             defaultImage
+            siteUrl
           }
         }
       }
@@ -42,9 +43,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `image`,
-          content:
-            "https://dw-barcelona.creandia.com" +
-            site.siteMetadata.defaultImage,
+          content: site.siteMetadata.siteUrl + site.siteMetadata.defaultImage,
         },
         {
           property: `og:title`,
@@ -56,9 +55,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content:
-            "https://dw-barcelona.creandia.com" +
-            site.siteMetadata.defaultImage,
+          content: site.siteMetadata.siteUrl + site.siteMetadata.defaultImage,
         },
         {
           property: `og:type`,
@@ -70,9 +67,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content:
-            "https://dw-barcelona.creandia.com" +
-            site.siteMetadata.defaultImage,
+          content: site.siteMetadata.siteUrl + site.siteMetadata.defaultImage,
         },
         {
           name: `twitter:creator`,
