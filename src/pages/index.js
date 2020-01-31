@@ -53,7 +53,7 @@ const IndexPage = () => {
             </div>
             <Img
               style={{ marginBottom: "-150px", zIndex: "1" }}
-              fluid={images[0].node.childImageSharp.fluid}
+              fluid={images[1].node.childImageSharp.fluid}
             />
           </Grid>
         </Wrap>
@@ -115,7 +115,7 @@ const IndexPage = () => {
         <Grid cols="1fr 1fr">
           <Img
             style={{ zIndex: "1" }}
-            fluid={images[1].node.childImageSharp.fluid}
+            fluid={images[0].node.childImageSharp.fluid}
           />
           <div
             style={{
