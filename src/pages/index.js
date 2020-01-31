@@ -32,7 +32,7 @@ const IndexPage = () => {
 
   return (
     <React.Fragment>
-      <SEO title="Home" />
+      <SEO title="Barcelona med Dennis Westerberg" />
       <Sec
         space="0px 0px 5vh 0px"
         mSpace="0px 0px 5vh 0px"
