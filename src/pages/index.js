@@ -180,56 +180,56 @@ const IndexPage = () => {
               <BlurbTwo />
               <h4>Utbildning</h4>
               <p>
-                Det blir ett specialkomponerat schema med de tre principerna som
-                huvudingrediens.
+                En utbildning som fokuserar på ett välmående som håller i sig
+                över tid. En möjlighet att vara i balans med sig själv, trots
+                att världen då och då hamnar i obalans.
               </p>
             </Blurb>
             <Blurb>
               <BlurbTwo />
               <h4>Övernattning</h4>
               <p>
-                Det blir ett specialkomponerat schema med de tre principerna som
-                huvudingrediens.
+                Övernattning i tre nätter på hotell H10 Universitat i centrala
+                Barcelona – del i dubbelrum, men med möjlighet att beställa
+                enkelrumstillägg.
               </p>
             </Blurb>
             <Blurb>
               <BlurbTwo />
               <h4>Frukost</h4>
               <p>
-                Det blir ett specialkomponerat schema med de tre principerna som
-                huvudingrediens.
+                I priset ingår en härlig frukostbuffé varje dag, kl. 9 – 10.
               </p>
             </Blurb>
             <Blurb>
               <BlurbTwo />
               <h4>Kvällsmiddag</h4>
               <p>
-                Det blir ett specialkomponerat schema med de tre principerna som
-                huvudingrediens.
+                En av kvällarna äter vi en gemensam middag tillsammans, och
+                njuter av sällskapet.
               </p>
             </Blurb>
             <Blurb>
               <BlurbTwo />
               <h4>Vinprovning</h4>
               <p>
-                Det blir ett specialkomponerat schema med de tre principerna som
-                huvudingrediens.
+                Vi beger oss iväg på vinprovning, och får smaka på de olika
+                vinerna som Katalonien och Spanien erbjuder. Vi får lär oss allt
+                om vinframställningsprocessen och umgås i en avslappnad och
+                informell miljö.
               </p>
             </Blurb>
             <Blurb>
               <BlurbTwo />
               <h4>Frukt, kaffe och te</h4>
-              <p>
-                Det blir ett specialkomponerat schema med de tre principerna som
-                huvudingrediens.
-              </p>
+              <p>Vi har fri tillgång till frukt, kaffe och te alla dagarna.</p>
             </Blurb>
             <Blurb>
               <BlurbTwo />
               <h4>Transfer</h4>
               <p>
-                Det blir ett specialkomponerat schema med de tre principerna som
-                huvudingrediens.
+                Vi ser till att ni hämtas och lämnas på flygplatsen i Barcelona
+                – allt för att göra resan enkel och extra bekväm.
               </p>
             </Blurb>
             <GetInfo>
