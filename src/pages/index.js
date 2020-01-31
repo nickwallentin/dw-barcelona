@@ -214,8 +214,8 @@ const IndexPage = () => {
               <h4>Vinprovning</h4>
               <p>
                 Vi beger oss iväg på vinprovning, och får smaka på de olika
-                vinerna som Katalonien och Spanien erbjuder. Vi får lär oss allt
-                om vinframställningsprocessen och umgås i en avslappnad och
+                vinerna som Katalonien och Spanien erbjuder. Vi får lära oss
+                allt om vinframställningsprocessen och umgås i en avslappnad och
                 informell miljö.
               </p>
             </Blurb>
