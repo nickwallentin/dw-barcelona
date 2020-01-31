@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Res med Dennis Westerberg`,
     description: `Du får möjlighet att kombinera en fördjupning i de tre principerna med en avkopplande storstadssemester. Vi möts i underbara Barcelona, och spenderar mycket tid tillsammans. Ett unikt tillfälle att utforska välmåendet och att uppleva balans och sinnesnärvaro som håller i sig över tid.`,
-    author: `@gatsbyjs`,
+    author: `@nickwallentin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,6 +36,7 @@ module.exports = {
         icon: `src/images/assets/favicon.jpg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
