@@ -26,6 +26,8 @@ const IndexPage = () => {
   const data = useStaticQuery(query)
   const images = data.allFile.edges
 
+  const bookLink = "https://airtable.com/shrgepjwaaoiQnE8w"
+
   return (
     <React.Fragment>
       <SEO title="Home" />
@@ -44,7 +46,9 @@ const IndexPage = () => {
                 unikt tillfälle att utforska välmåendet och att uppleva balans
                 och sinnesnärvaro som håller i sig över tid.
               </p>
-              <Btn>Boka din plats</Btn>
+              <Btn href={bookLink} rel="noopener noreferrer" target="_blank">
+                Boka din plats
+              </Btn>
             </div>
             <Img
               style={{ marginBottom: "-150px", zIndex: "1" }}
@@ -273,7 +277,9 @@ const IndexPage = () => {
             <a style={{ display: "block" }} href="#">
               Praktiskt information och pris.
             </a>
-            <Btn>Boka din plats idag</Btn>
+            <Btn href={bookLink} rel="noopener noreferrer" target="_blank">
+              Boka din plats idag
+            </Btn>
             <SymbolTwoCtaTop
               style={{ position: "absolute", top: "0", left: "0" }}
             />
