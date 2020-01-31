@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Header from "../components/header"
+import "../components/layout.css"
 import SEO from "../components/seo"
 
 import { Sec, Wrap, Grid, Btn } from "../components/ui"
