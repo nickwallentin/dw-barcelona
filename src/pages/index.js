@@ -376,7 +376,7 @@ const IndexPage = () => {
                       drink.
                     </li>
                     <li>Frukost varje dag: 9 – 10</li>
-                    <li>Utbildning den 25/9, 26/9, 27/9: 10 – 14</li>
+                    <li>Utbildning den 25/9, 26/9, 27/9: kl 10.00–14.00</li>
                     <li>Hemfärd: tidigast kl 15.00, 27/9</li>
                   </ul>
                 </li>
@@ -488,7 +488,7 @@ const InfoModal = styled.div`
   z-index: 10;
   width: 100vw;
   height: 100vh;
-
+  overflow-y: scroll;
   padding: 8vw;
   background: var(--c-green);
   color: var(--c-beige);
