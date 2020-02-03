@@ -1,12 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 
 import Layout from "../components/layout"
+import Header from "../components/header"
+import InfoModal from "../components/infoModal"
 import SEO from "../components/seo"
 import { Sec, Wrap, Grid } from "../components/ui"
 
 const ContactPage = () => {
+  const [modalOpen, setModalOpen] = useState(false)
+  const bookLink = "https://airtable.com/shrgepjwaaoiQnE8w"
   return (
-    <Layout>
+    <React.Fragment>
+      <Header modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <SEO />
       <Sec bg="var(--c-beige)">
         <Wrap>
@@ -21,7 +26,14 @@ const ContactPage = () => {
           </div>
         </Wrap>
       </Sec>
-    </Layout>
+      {modalOpen && (
+        <InfoModal
+          modalOpen={modalOpen}
+          setModalOpen={setModalOpen}
+          bookLink={bookLink}
+        />
+      )}
+    </React.Fragment>
   )
 }
 

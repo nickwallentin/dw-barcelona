@@ -63,6 +63,7 @@ const HeaderContainer = styled.header`
 
   a {
     text-decoration: none;
+    font-style: normal;
     color: var(--c-beige);
   }
 `
