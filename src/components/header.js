@@ -1,4 +1,6 @@
 import styled from "styled-components"
+
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { Wrap, Btn } from "../components/ui"
@@ -8,7 +10,9 @@ import Logo from "../assets/svg/symbol.svg"
 const Header = ({ modalOpen, setModalOpen }) => (
   <HeaderContainer>
     <Wrap>
-      <Logo style={{ width: "40px" }} />
+      <Link to="/">
+        <Logo style={{ width: "40px" }} />
+      </Link>
       <div style={{ display: "flex", alignItems: "center" }}>
         <a
           onClick={() => setModalOpen(!modalOpen)}
@@ -22,6 +26,9 @@ const Header = ({ modalOpen, setModalOpen }) => (
         >
           Info & pris
         </a>
+        <Link to="/kontakt" style={{ marginRight: "20px" }}>
+          Kontakt
+        </Link>
         <Btn
           href="https://airtable.com/shrgepjwaaoiQnE8w"
           rel="noopener noreferrer"
@@ -52,5 +59,10 @@ const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--c-beige);
   }
 `

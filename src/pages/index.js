@@ -154,7 +154,8 @@ const IndexPage = () => {
               heller inte långt till Barrio Gotico, Barcelonas historiska
               kvarter, och Paseo de Gracia. The H10 Universitat är inrymt i en
               byggnad från slutet av 1800-talet, som renoverats och byggts om
-              till ett modernt hotell med alla bekvämligheter.
+              till ett modernt hotell med alla bekvämligheter. Det är i
+              hotellets rymliga och fräscha lokaler som utbildningen hålls.
             </p>
             <a
               href="https://www.google.com/maps/place/H10+Universitat/@41.3868573,2.1666757,15z/data=!4m8!3m7!1s0x0:0xac0153bb778f81d5!5m2!4m1!1i2!8m2!3d41.3868573!4d2.1666757"
@@ -198,8 +199,8 @@ const IndexPage = () => {
               <h4>Övernattning</h4>
               <p>
                 Övernattning i tre nätter på hotell H10 Universitat i centrala
-                Barcelona – del i dubbelrum, men med möjlighet att beställa
-                enkelrumstillägg.
+                Barcelona – del i dubbelrum. Ifall du önskar ett eget rum, finns
+                det möjlighet att göra en tilläggsbeställning vid bokningen.
               </p>
             </Blurb>
             <Blurb>
