@@ -34,6 +34,11 @@ const IndexPage = () => {
   return (
     <React.Fragment>
       <SEO title="Barcelona med Dennis Westerberg" />
+      <ImportantMessage>
+        Resan har blivit framflyttad, pga. det rådande Corona-läget. Vi hoppas
+        att kunna resa någon gång till våren 2021 istället. Mer information
+        kommer under hösten 2020.
+      </ImportantMessage>
       <Sec
         space="0px 0px 5vh 0px"
         mSpace="0px 0px 5vh 0px"
@@ -421,4 +426,13 @@ const query = graphql`
       }
     }
   }
+`
+
+const ImportantMessage = styled.div`
+  background: red;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1rem;
 `
